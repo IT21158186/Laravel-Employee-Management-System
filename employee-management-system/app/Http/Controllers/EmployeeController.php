@@ -3,15 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Employee;
 
 class EmployeeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
+
+    protected $employee;
+    public function __construct(){
+
+        $this->employee = new Employee();
+    }
+
+
+
+    
     public function index()
     {
-        //
+       
     }
 
     /**
