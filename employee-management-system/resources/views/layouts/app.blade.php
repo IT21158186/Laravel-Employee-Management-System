@@ -12,6 +12,8 @@
 
 @yield('content')
 
+
+
 @include('libraries.scripts')
     
 </body>
