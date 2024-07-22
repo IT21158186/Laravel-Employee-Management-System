@@ -6,6 +6,19 @@
 
         <h3 align="center" class="mt-5">Employee Management</h3>
 
+        <!-- Display Success and Error Messages -->
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+
         <div class="row">
             <div class="col-md-2">
             </div>
@@ -68,3 +81,5 @@
         }
     </style>
 @endpush
+
+

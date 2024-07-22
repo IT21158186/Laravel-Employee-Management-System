@@ -16,8 +16,6 @@ class EmployeeController extends Controller
     }
 
 
-
-    
     public function index()
     {
         $response['employees'] = $this->employee->all();
@@ -26,8 +24,6 @@ class EmployeeController extends Controller
     }
 
    
-
-  
     public function store(Request $request)
     {
         $this->employee-> create($request->all());
@@ -39,7 +35,6 @@ class EmployeeController extends Controller
     {
         
     }
-
    
     
     public function edit(string $id)
@@ -56,9 +51,7 @@ class EmployeeController extends Controller
         return redirect('employee');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(string $id)
     {
         $employee = $this->employee->find($id);
