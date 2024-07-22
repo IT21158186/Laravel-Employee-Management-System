@@ -2,32 +2,32 @@
 
 @section('content')
 
-    <div class="container">
+<div class="container">
 
-        <h3 align="center" class="mt-5">Employee Management</h3>
+    <h3 align="center" class="mt-5">Employee Management</h3>
 
-        <!-- Display Success and Error Messages -->
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+    <!-- Display Success and Error Messages -->
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
 
-        @if (session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
+    @if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
 
-        <div class="row">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-8">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
 
             <div class="form-area">
                 <form method="POST" action="{{ route('employee.update', $employee->id) }}">
-                {!! csrf_field() !!}
-                  @method("PATCH")
+                    {!! csrf_field() !!}
+                    @method("PATCH")
                     <div class="row">
                         <div class="col-md-6">
                             <label>Student Name</label>
@@ -54,32 +54,30 @@
                 </form>
             </div>
 
-            </div>
         </div>
     </div>
+</div>
 
 @endsection
 
 
 @push('css')
-    <style>
-        .form-area{
-            padding: 20px;
-            margin-top: 20px;
-            background-color:#b3e5fc;
-        }
+<style>
+    .form-area {
+        padding: 20px;
+        margin-top: 20px;
+        background-color: #b3e5fc;
+    }
 
-        .bi-trash-fill{
-            color:red;
-            font-size: 18px;
-        }
+    .bi-trash-fill {
+        color: red;
+        font-size: 18px;
+    }
 
-        .bi-pencil{
-            color:green;
-            font-size: 18px;
-            margin-left: 20px;
-        }
-    </style>
+    .bi-pencil {
+        color: green;
+        font-size: 18px;
+        margin-left: 20px;
+    }
+</style>
 @endpush
-
-
