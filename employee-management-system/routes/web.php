@@ -1,14 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\EmployeeController;
 
 
+// Route for displaying all employees
+Route::get('/', [EmployeeController::class, 'index']);
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::resource('/employee', EmployeeController::class);
+// Keep the resource route for '/employee' to manage other actions
+Route::resource('employee', EmployeeController::class);
