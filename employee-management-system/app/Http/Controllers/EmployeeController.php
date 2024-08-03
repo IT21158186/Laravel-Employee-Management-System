@@ -23,6 +23,7 @@ class EmployeeController extends Controller
         return view('pages.index')->with($response);
     }
 
+    
 
     public function store(Request $request)
     {
@@ -37,7 +38,7 @@ class EmployeeController extends Controller
 
     public function show(string $id)
     {
-        
+
     }
 
 

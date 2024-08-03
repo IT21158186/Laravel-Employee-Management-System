@@ -4,7 +4,6 @@
     <div class="container">
         <h3 align="center" class="mt-5">Employee Management</h3>
 
-         <!-- Display Success and Error Messages -->
          @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
@@ -91,7 +90,7 @@
         .form-area{
             padding: 20px;
             margin-top: 20px;
-            background-color:#b3e5fc;
+            background-color:#3cd17f;
         }
         .bi-trash-fill{
             color:red;
